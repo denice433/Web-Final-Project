@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Designer Profile - Street Chic</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Additional FAQ Styling */
+    .faqs {
+      padding: 60px 20px;
+      background-color: #fff0f5;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .faqs h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 32px;
+      color: #d36c94;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      background: #fff;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 15px 20px;
+      font-size: 16px;
+      font-family: 'Raleway', sans-serif;
+      background-color: #f9d5e5;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-question.active::after {
+      content: '-';
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 15px 20px;
+      font-size: 15px;
+      color: #444;
+      font-family: 'Raleway', sans-serif;
+      background-color: #fff;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .contact-footer {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Raleway', sans-serif;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          const answer = btn.nextElementSibling;
+          if (btn.classList.contains('active')) {
+            answer.style.display = 'block';
+          } else {
+            answer.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <nav class="navbar">
+      <h1 class="logo">Street Chic</h1>
+      <ul class="nav-links">
+        <li><a href="Denice.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="misvis.html">Mission and Vision</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="blog.html">News</a></li>
+        <li><a href="faqs-reviews.html">FAQs</a></li>
+        <li><a href="web-designer.html">Web Designer Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FAQs Section -->
+  <section id="faqs" class="faqs">
+    <h2>FAQs</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">What sizes are available?</button>
+      <p class="faq-answer">We offer sizes ranging from XS to XXL to cater to all body types.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you ship internationally?</button>
+      <p class="faq-answer">Yes, we offer worldwide shipping with estimated delivery times of 7–14 business days.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How can I track my order?</button>
+      <p class="faq-answer">After placing an order, you’ll receive a tracking number via email to monitor your delivery.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I return or exchange items?</button>
+      <p class="faq-answer">Absolutely! We accept returns and exchanges within 14 days of receipt, provided the items are unused and in original packaging.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you restock sold-out items?</button>
+      <p class="faq-answer">Some popular items are restocked regularly. Sign up for restock notifications on the product page or follow us on social media for updates.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are your materials sustainable?</button>
+      <p class="faq-answer">Yes, our collections use eco-friendly materials like organic cotton, bamboo fabric, and recycled blends for a greener future.</p>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Designer Profile - Street Chic</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <script defer>
+    // FAQ Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          const answer = btn.nextElementSibling;
+          answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- HEADER NAVIGATION -->
+   <header class="site-header">
+    <nav class="navbar">
+      <h1 class="logo">Street Chic</h1>
+      <ul class="nav-links">
+        <li><a href="Denice.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="misvis.html">Mission and Vision</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="blog.html">News</a></li>
+        <li><a href="faqs-reviews.html">FAQs</a></li>
+        <li><a href="web-designer.html">Web Designer Profile</a></li>
+  
+      </ul>
+    </nav>
+  </header>
+<!-- MISSION AND VISION SECTION -->
+  <section id="mission-vision" class="mission-vision">
+  <div class="mv-container">
+    <div class="mv-card">
+      <h2>Mission</h2>
+      <p class="mv-text">To empower individuals through fashion by offering high-quality, stylish, and affordable tops that reflect personal expression and confidence.</p>
+    </div>
+    <div class="mv-card">
+      <h2>Vision</h2>
+      <p class="mv-text">To become a leading global brand known for redefining everyday fashion, inspiring self-expression through innovative designs and sustainable practices.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
